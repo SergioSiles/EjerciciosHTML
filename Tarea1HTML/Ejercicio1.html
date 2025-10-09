@@ -5,69 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      table {
+      /*CSS Tablas*/
+      .Tabla * table {
         border: 1px solid black;
         border-collapse: collapse;
         text-align: center;
       }
-      ul {
+      .Tabla * ul {
         text-align: start;
       }
-      img {
+      .Tabla * img {
         width: 40%;
       }
     </style>
   </head>
   <body>
-    <table border>
-      <thead>
-        <tr>
-          <th></th>
-          <th colspan="3"><img src="img/120_ipod.png" alt="" /></th>
-          <th colspan="2"><img src="img/100_ipod.png" alt="" /></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>Capacidad</b></td>
-          <td>2GB</td>
-          <td>4GB</td>
-          <td>8GB</td>
-          <td>32GB</td>
-          <td>2GB</td>
-        </tr>
-        <tr>
-          <td><b>Colores</b></td>
-          <td><b>Blanco</b></td>
-          <td>
-            <ul>
-              <li>Rosa</li>
-              <li>Negro</li>
-              <li>Dorado</li>
-            </ul>
-          </td>
-          <td><b>Negro</b></td>
-          <td colspan="2">
-            <ul>
-              <li>Negro</li>
-              <li>Blanco</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><b>Pantalla</b></td>
-          <td colspan="3"><b>3 Pulgadas</b></td>
-          <td colspan="2"><b>7 Pulgadas</b></td>
-        </tr>
-        <tr>
-          <td rowspan="2"><b>Tiempo de Carga</b></td>
-          <td colspan="3" rowspan="2"><b>1 Hora</b></td>
-          <td colspan="2"><b>5 Horas</b></td>
-        </tr>
-        <tr>
-          <td colspan="2"><b>30 Minutos para 75%</b></td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- Imagenes y Enlaces -->
+    <div class="ImgEnlaces">
+      <p style="text-align: center">
+        <a href="http://www.as.com" target="_blank"
+          ><img src="img/html5.png"
+        /></a>
+        <a href="http://www.elpais.com" target="_blank"
+          ><img width="225px" src="img/css3.png"
+        /></a>
+      </p>
+      <p style="text-align: center">
+        <a href="http://www.elmundo.com" target="_blank"
+          ><img src="img/chrome.jpeg"
+        /></a>
+      </p>
+    </div>
+    <!-- Listas -->
+    <div class="Lista">
+      <ol type="i">
+        <li>
+          General Aviation
+          <ol type="a">
+            <li>Single Aviation Aircraft</li>
+            <li>Dual Engine Aircraft</li>
+          </ol>
+        </li>
+        <li>
+          Comercial Aviationgine
+          <ul style="list-style-type: disc">
+            <li>Dual Engine</li>
+            <li>Tri-Engine</li>
+          </ul>
+        </li>
+      </ol>
+
+      <ul style="list-style-type: square">
+        <li>
+          A
+          <ul style="list-style-type: disc">
+            <li>
+              B
+              <ol>
+                <li>C</li>
+                <li>D</li>
+              </ol>
+            </li>
+            <li>
+              E
+              <ul>
+                <li>F</li>
+                <li>G</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>B</li>
+      </ul>
+    </div>
+    <!-- Tabla -->
+    <div class="Tabla">
+      <table border>
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="3"><img src="img/120_ipod.png" alt="" /></th>
+            <th colspan="2"><img src="img/100_ipod.png" alt="" /></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Capacidad</b></td>
+            <td>2GB</td>
+            <td>4GB</td>
+            <td>8GB</td>
+            <td>32GB</td>
+            <td>2GB</td>
+          </tr>
+          <tr>
+            <td><b>Colores</b></td>
+            <td><b>Blanco</b></td>
+            <td>
+              <ul>
+                <li>Rosa</li>
+                <li>Negro</li>
+                <li>Dorado</li>
+              </ul>
+            </td>
+            <td><b>Negro</b></td>
+            <td colspan="2">
+              <ul>
+                <li>Negro</li>
+                <li>Blanco</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Pantalla</b></td>
+            <td colspan="3"><b>3 Pulgadas</b></td>
+            <td colspan="2"><b>7 Pulgadas</b></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><b>Tiempo de Carga</b></td>
+            <td colspan="3" rowspan="2"><b>1 Hora</b></td>
+            <td colspan="2"><b>5 Horas</b></td>
+          </tr>
+          <tr>
+            <td colspan="2"><b>30 Minutos para 75%</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
