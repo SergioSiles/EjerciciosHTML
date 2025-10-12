@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="destination.html" method="POST">
+      <p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" />
+      </p>
+
+      <p>
+        <label for="provincia">Provincia</label>
+        <select name="provincia" multiple>
+          <option value="Z">Zaragoza</option>
+          <option>Huesca</option>
+          <option>Teruel</option>
+        </select>
+      </p>
+
+      <p>
+        <textarea cols="10" rows="10">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem praesentium aliquam debitis voluptatum sit facilis, excepturi odit repudiandae et voluptatem est tempora iure harum eos incidunt blanditiis itaque ex sunt.
+            </textarea
+        >
+      </p>
+      <p>
+        <button type="reset">Haz click aquí</button>
+      </p>
+
+      <p>
+        <button type="button" disabled>
+          <img width="100px" src="img/formularios_ejercicios.png" />
+        </button>
+      </p>
+
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Inserta Nombre"
+            required
+          />
+        </p>
+        <p>
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" name="apellidos" value="Pérez" readonly />
+        </p>
+        <p>
+          <label for="provincia">Provincia</label>
+          <select name="provincia">
+            <option value="Toledo">Toledo</option>
+            <option value="Madrid">Madrid</option>
+          </select>
+        </p>
+        <p></p>
+      </fieldset>
+    </form>
+  </body>
+</html>

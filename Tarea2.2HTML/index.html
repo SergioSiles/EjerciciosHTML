@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <style>
+      .full {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      .fijo {
+        resize: none;
+        width: 93%;
+        height: 85%;
+      }
+      fieldset {
+        margin: 20px;
+        width: 800px;
+      }
+      .fieldTop {
+        border: 2px solid black;
+        background-color: #9ffc89;
+      }
+      .legTop {
+        border: 2px solid black;
+        background-color: white;
+      }
+      .fieldMid {
+        border: 2px solid black;
+        background-color: #add8e9;
+        height: 200px;
+        display: flex;
+        align-items: center;
+      }
+      .legMid {
+        border: 2px solid black;
+        background-color: white;
+      }
+      .fieldBot {
+        border: 2px solid black;
+        background-color: #ba73f3;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .fieldBot p {
+        margin: 0;
+        display: block;
+      }
+      .progIzq {
+        text-align: left;
+      }
+      .progDer {
+        text-align: left;
+        padding-right: 190px;
+      }
+      .legBot {
+        border: 2px solid black;
+        background-color: white;
+      }
+      .botones {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full">
+      <form action="#" method="post">
+        <fieldset class="fieldTop">
+          <legend class="legTop"><b>Datos Personales</b></legend>
+          <p>
+            Nombre:
+            <input type="text" name="nombre" placeholder="Inserta nombre" />
+            Apellidos:
+            <input
+              type="text"
+              name="apellidos"
+              placeholder="Inserta apellidos"
+            />
+            Email:
+            <input type="email" name="email" placeholder="Correo electrónico" />
+          </p>
+          <p>
+            Telefono:
+            <input type="number" name="telefono" placeholder="Nº de contacto" />
+            DNI:
+            <input type="text" name="dni" placeholder="Nº de documento" />
+            Fecha de Nacimiento:
+            <input type="date" name="fechanacimiento" />
+          </p>
+          <p>
+            Provincia:
+            <select name="provincia">
+              <option value="null" disabled selected>-- Selecciona --</option>
+              <option value="toledo">Toledo</option>
+              <option value="madrid">Madrid</option>
+            </select>
+            Sexo: <input type="radio" value="hombre" name="sexo" /> Hombre
+            <input type="radio" value="mujer" name="sexo" checked /> Mujer
+          </p>
+          <p>
+            Dispositivo Preferido:
+            <input type="checkbox" name="dispositivo" value="pc" /> PC
+            <input type="checkbox" name="dispositivo" value="tableta" />
+            Tableta
+            <input type="checkbox" name="dispositivo" value="movil" /> Móvil
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IDE Preferido:
+            <input type="text" name="ide" />
+          </p>
+        </fieldset>
+        <fieldset class="fieldMid">
+          <legend class="legMid"><b>Otros datos de interés</b></legend>
+          <textarea
+            name="info"
+            class="fijo"
+            placeholder="Indica cualquier otra informacion que consideres relevante"
+          ></textarea>
+        </fieldset>
+        <fieldset class="fieldBot">
+          <legend class="legBot"><b>Competencias de Programación:</b></legend>
+          <div class="progIzq">
+            <p>
+              Nivel de Java:
+              <input type="range" value="0" /> <br />
+              Nivel de HTML:
+              <input type="range" value="0" />
+            </p>
+          </div>
+          <div class="progDer">
+            <p>
+              Nivel de Python:
+              <input type="range" value="0" /> <br />
+              Nivel de CSS:
+              <input type="range" value="0" />
+            </p>
+          </div>
+        </fieldset>
+        <div class="botones">
+          <input type="button" value="Activado" />
+          <input type="reset" value="Borrar Datos" />
+          <input type="submit" value="Enviar Solicitud" />
+          <input type="button" value="Desactivado" disabled />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
