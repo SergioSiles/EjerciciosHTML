@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+section {
+  background: white;
+  margin: 32px auto;
+  width: 90%;
+  max-width: 1000px;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+}
+
+.demo {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background: #fafafa;
+}
+
+/* DISPLAY */
+.inline span {
+  display: inline;
+  background: #ffeaa7;
+  padding: 5px;
+}
+
+.inline-block span {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: #fab1a0;
+  text-align: center;
+  line-height: 50px;
+  margin: 5px;
+}
+
+.block div {
+  display: block;
+  background: #74b9ff;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* LAYOUT */
+.layout-fixed {
+  width: 400px;
+  background: #55efc4;
+}
+.layout-elastic {
+  width: 640px;
+  background: #81ecec;
+}
+.layout-fluid {
+  width: 80%;
+  background: #a29bfe;
+}
+.layout-hibrido {
+  width: 80%;
+  max-width: 600px;
+  background: #ffeaa7;
+}
+
+/* CENTRADO */
+.centro-texto {
+  text-align: center;
+}
+.centro-bloque {
+  width: 200px;
+  margin: auto;
+  background: #fdcb6e;
+  padding: 10px;
+}
+.centro-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #fab1a0;
+}
+
+/* POSITION */
+.pos-contenedor {
+  position: relative;
+  background: #dfe6e9;
+  height: 150px;
+}
+.pos-absoluto {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #00cec9;
+  padding: 10px;
+  color: white;
+}
+.pos-fijo {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #0984e3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* COLUMNAS */
+.columnas {
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 2px solid #ccc;
+}
+
+/* FLOTANTES */
+.flotante img {
+  float: left;
+  width: 120px;
+  margin-right: 10px;
+}
+.flotante {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - CSS</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>HTML - CSS</h1>
+    </header>
+
+    <section>
+      <h2>DISPLAY</h2>
+      <div class="demo inline">
+        <span>esto</span>
+        <span>es</span>
+        <span>inline.</span>
+        <span>El cuadro se ajusta al texto</span>
+      </div>
+      <div class="demo inline-block">
+        <span>Esto es</span>
+        <span>inline block.</span>
+        <span>No te pases</span>
+      </div>
+      <div class="demo block">
+        <div>Estos dos div usan la siguiente propiedad:</div>
+        <div>display block</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>LAYOUT</h2>
+      <div class="demo layout-fixed">Fixed con 400px de largo</div>
+      <div class="demo layout-elastic">Elastic 640px de largo</div>
+      <div class="demo layout-fluid">Fluid 80% de largo</div>
+      <div class="demo layout-hibrido">Híbrido 80% de largo y maximo 600px</div>
+    </section>
+
+    <section>
+      <h2>CENTRADO</h2>
+      <div class="demo centro-texto">Texto centrado con inline</div>
+      <div class="demo centro-bloque">
+        Bloque centrado con text align center
+      </div>
+      <div class="demo centro-flex">
+        <p>Centrado total, con display flex</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>POSITION</h2>
+      <div class="demo pos-contenedor">
+        <div class="pos-absoluto">
+          Este texto y su contenedor no pueden taparse, menos por el boton azul
+          de abajo a la derecha
+        </div>
+      </div>
+      <p class="demo">
+        Si sigues bajando veras como el div de arriba se pone encima de todo,
+        gracias a la propiedad position absolute
+      </p>
+    </section>
+
+    <section>
+      <h2>COLUMNAS</h2>
+      <div class="demo columnas">
+        Este texto esta dentro de un div el cual tiene las 3 propiedades, si el
+        texto ocupa mucho se dividirá en columnas, no se que mas poner asi que
+        voy a poner lo que sea
+      </div>
+    </section>
+
+    <section>
+      <h2>FLOTANTES</h2>
+      <div class="demo flotante">
+        <img src="img/globo.png" />
+        <p>
+          Este globo flota a la izquierda y el texto se pone a su alrededor
+          tambien se ha usado el clear para que el div respete el tamaño del
+          globo, todo esto se hace para no pincharlo
+        </p>
+      </div>
+    </section>
+
+    <div class="pos-fijo">Hola soy el boton que tapa todo</div>
+  </body>
+</html>
