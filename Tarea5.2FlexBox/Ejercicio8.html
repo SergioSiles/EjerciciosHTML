@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <div id="Ejercicio8-Container">
+      <form autocomplete="off">
+        <div class="row">
+          <label for="first">First name</label>
+          <div class="control">
+            <input
+              id="first"
+              type="text"
+              placeholder="Enter your first name here"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="last">Last name</label>
+          <div class="control">
+            <input
+              id="last"
+              type="text"
+              placeholder="Enter your last name here"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <div class="control">
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email here"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="phone">Phone</label>
+          <div class="control">
+            <input id="phone" type="tel" placeholder="Enter your phone here" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="message">Message</label>
+          <div class="control">
+            <textarea
+              id="message"
+              placeholder="Enter your message here"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Age</label>
+          <div class="control">
+            <div class="age-options">
+              <label
+                ><input type="checkbox" name="age" value="20-29" />20-29</label
+              >
+              <label
+                ><input type="checkbox" name="age" value="30-39" />30-39</label
+              >
+              <label
+                ><input type="checkbox" name="age" value="40-49" />40-49</label
+              >
+              <label
+                ><input type="checkbox" name="age" value="50-59" />50-59</label
+              >
+              <label
+                ><input type="checkbox" name="age" value=">60" />&gt;60</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

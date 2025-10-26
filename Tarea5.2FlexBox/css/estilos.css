@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*------------------------------------------------------------Ejercicio 1------------------------------------------------------------*/
+#Ejercicio1-Container header {
+  display: flex;
+  background-color: #333333;
+  height: 80px;
+  width: 100%;
+}
+
+#Ejercicio1-Container header h1 {
+  color: white;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+}
+
+#Ejercicio1-Container nav {
+  display: flex;
+  background-color: #cccccc;
+  justify-content: space-around;
+  height: 50px;
+}
+
+#Ejercicio1-Container nav p {
+  border: 1px solid white;
+  height: 100%;
+  padding: 15px;
+}
+
+/*------------------------------------------------------------Ejercicio 2------------------------------------------------------------*/
+#Ejercicio2-Container header {
+  background-color: #008080;
+  height: 80px;
+}
+
+#Ejercicio2-Container nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#Ejercicio2-Container .DivIzq {
+  display: flex;
+  height: 100%;
+  width: 10%;
+  margin-left: 10px;
+}
+
+#Ejercicio2-Container .DivDer {
+  display: flex;
+  height: 120%;
+  width: 20%;
+}
+
+#Ejercicio2-Container nav a {
+  align-self: center;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  margin-top: 15px;
+}
+
+#Ejercicio2-Container .DivDer * {
+  color: #008080;
+  margin-top: 10px;
+}
+
+#Ejercicio2-Container .Boton {
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 60px;
+  height: 20px;
+}
+
+/*------------------------------------------------------------Ejercicio 3------------------------------------------------------------*/
+#Ejercicio3-Container header {
+  display: flex;
+  background-color: #333333;
+  height: 80px;
+  width: 100%;
+}
+
+#Ejercicio3-Container header h1 {
+  color: white;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+}
+
+#Ejercicio3-Container .imagenes {
+  display: flex;
+  background-color: #cccccc;
+  justify-content: space-around;
+  height: 220px;
+}
+
+#Ejercicio3-Container img {
+  width: 240px;
+  border: 1px dotted black;
+  padding: 15px;
+  margin: 15px;
+}
+
+/*------------------------------------------------------------Ejercicio 4------------------------------------------------------------*/
+#Ejercicio4-Container header {
+  display: flex;
+  background-color: #333333;
+  height: 80px;
+  width: 100%;
+}
+
+#Ejercicio4-Container header h1 {
+  color: white;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+}
+
+#Ejercicio4-Container .imagenes div {
+  border: 2px solid black;
+  width: 200px;
+  margin: 10px;
+}
+
+#Ejercicio4-Container img {
+  width: 100%;
+}
+
+#Ejercicio4-Container .imagenes {
+  display: flex;
+  text-align: center;
+}
+
+#Ejercicio4-Container .imagenes p {
+  background-color: grey;
+  height: 30px;
+  font-size: 25px;
+}
+/*------------------------------------------------------------Ejercicio 5------------------------------------------------------------*/
+#Ejercicio5-Container header {
+  background-color: #333333;
+  color: white;
+  padding: 20px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Ejercicio5-Container .catalogo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#Ejercicio5-Container .card {
+  display: flex;
+  border: 2px solid black;
+  width: 280px;
+  background-color: white;
+  margin: 0 10px 0 10px;
+}
+
+#Ejercicio5-Container .card img {
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+  border-right: 2px solid black;
+}
+
+#Ejercicio5-Container .contenido {
+  padding: 10px;
+  text-align: left;
+}
+
+#Ejercicio5-Container .titulo {
+  text-align: center;
+  background-color: grey;
+  font-size: 15px;
+  padding: 4px;
+  margin-bottom: 5px;
+}
+
+#Ejercicio5-Container .descripcion {
+  font-size: 12px;
+  text-align: justify;
+}
+
+/*------------------------------------------------------------Ejercicio 6------------------------------------------------------------*/
+
+/*------------------------------------------------------------Ejercicio 7------------------------------------------------------------*/
+#Ejercicio7-Container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 4px;
+}
+#Ejercicio7-Container > div {
+  display: flex;
+}
+
+#Ejercicio7-Container > div > div {
+  flex: 1;
+  background-color: #7f7f7f;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+/*------------------------------------------------------------Ejercicio 8------------------------------------------------------------*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef3f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+#Ejercicio8-Container {
+  width: 920px;
+  background: #077872;
+  color: #ffffff;
+  padding: 36px 48px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+#Ejercicio8-Container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#Ejercicio8-Container .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+#Ejercicio8-Container label {
+  width: 180px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding-top: 8px;
+  color: #ffffff;
+}
+
+#Ejercicio8-Container .control {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#Ejercicio8-Container input[type="text"],
+#Ejercicio8-Container input[type="email"],
+#Ejercicio8-Container input[type="tel"],
+#Ejercicio8-Container textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #222222;
+  font-size: 14px;
+  outline: none;
+}
+
+#Ejercicio8-Container textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.4;
+  padding-top: 12px;
+}
+
+#Ejercicio8-Container .age-options {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 8px;
+}
+
+#Ejercicio8-Container .age-options label {
+  color: #ffffff;
+  font-size: 13px;
+  text-transform: none;
+}
+
+#Ejercicio8-Container .age-options input[type="checkbox"] {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+#Ejercicio8-Container .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+#Ejercicio8-Container button {
+  background: #055f5a;
+  color: #ffffff;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
