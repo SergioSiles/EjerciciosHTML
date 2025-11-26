@@ -4,19 +4,29 @@ $dark-theme: true;
 @use "sass:math";
 @use "sass:list";
 
-/// @mixin borde-personalizado
-/// @param {Number} $ancho - Grosor del borde
-/// @param {Color}  $color - Color del borde
-/// @param {Number} $radio - Radio del borde
-
+/**
+ * Mixin reutilizable para generar bordes estándar
+ * @mixin borde-personalizado
+ */
 @mixin borde-personalizado($ancho, $color, $radio) {
   border: $ancho solid $color;
   border-radius: $radio;
 }
 
 /**
+ * Función personalizada
+ * Duplica un valor numérico. La uso luego con el border-radius.
+ * @function doble
+ */
+@function doble($valor) {
+  @if type-of($valor) != "number" {
+    @error "La función doble() requiere un número. Se recibió: #{type-of($valor)}";
+  }
+  @return $valor * 2;
+}
+
+/**
  * Sistema de colores base y layout general del sitio
- * Controla fondos, texto, bordes y espaciados principales.
  */
 $color-background: #ccc;
 $color-baser: #333;
@@ -40,10 +50,10 @@ $margin-1: 0.5rem;
 $width: 100%;
 
 /**
- * Sistema de temas (claro / oscuro)
- * Actúa sobre el body para cambiar el aspecto global.
+ * Tema claro / oscuro
  */
 body {
+  @debug "Aplicando tema de la página..."; // Petición del ejercicio
   @if $ligh-theme == true {
     background-color: #fff;
     color: #000;
@@ -51,6 +61,7 @@ body {
     background-color: #000;
     color: #fff;
   } @else {
+    @warn "No se ha activado ni tema claro ni tema oscuro. Se aplica el tema neutro.";
     background-color: #aaa;
     color: #444;
   }
@@ -73,10 +84,8 @@ $color-list: #aaa, #00f, orange, rgb(242, 255, 0), #0f0;
   }
 }
 
-// Mapa con las rutas de imágenes de banderas
-// Usado para generar clases dinámicas según el país
+/// Mapa de banderas
 /// @type Map
-
 $mapa: (
   Espana: "../img/Espana.png",
   Francia: "../img/Francia.png",
@@ -92,7 +101,7 @@ $mapa: (
     padding: 0.2rem;
     margin: 1rem;
     border: $border-width solid $border-color;
-    border-radius: 2 * $border-radius;
+    border-radius: doble($border-radius); // Uso real de la función
   }
 }
 
@@ -127,15 +136,14 @@ nav {
 }
 
 figure.card {
-  border: $border-width #{$border-style} $border-color;
-  border-radius: $border-radius;
+  @include borde-personalizado($border-width, $border-color, $border-radius);
   display: inline-block;
   padding: 1rem;
   width: $figure-width;
 }
 
 img {
-  border-radius: 2 * $border-radius;
+  border-radius: doble($border-radius);
   width: $width;
 }
 
@@ -153,10 +161,8 @@ $color-shadow: #888;
 
 $border-radius: 0.4rem;
 
-// Sistema de colores para los botones
-// Cada clave del map genera una clase .btn-{tipo}
+/// Sistema de colores de los botones
 /// @type Map
-
 $btn-colors: (
   "error": $color-error,
   "warning": $color-warning,
