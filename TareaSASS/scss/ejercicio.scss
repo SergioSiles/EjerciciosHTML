@@ -1,0 +1,188 @@
+$ligh-theme: true;
+$dark-theme: true;
+
+@use "sass:math";
+@use "sass:list";
+
+/// @mixin borde-personalizado
+/// @param {Number} $ancho - Grosor del borde
+/// @param {Color}  $color - Color del borde
+/// @param {Number} $radio - Radio del borde
+
+@mixin borde-personalizado($ancho, $color, $radio) {
+  border: $ancho solid $color;
+  border-radius: $radio;
+}
+
+/**
+ * Sistema de colores base y layout general del sitio
+ * Controla fondos, texto, bordes y espaciados principales.
+ */
+$color-background: #ccc;
+$color-baser: #333;
+
+$navbar-background-color: rgb(155, 111, 145);
+$navbar-color-hover: $color-background;
+
+$border-color: $color-baser;
+$border-style: "solid";
+$border-width: 0.1rem;
+
+$border-radius: 1rem;
+$main-container-width: 80%;
+$margin: 0px auto;
+$padding: 1rem;
+$padding-2: 0.2rem;
+
+$figure-width: 25%;
+$font-size: 0.8rem;
+$margin-1: 0.5rem;
+$width: 100%;
+
+/**
+ * Sistema de temas (claro / oscuro)
+ * Actúa sobre el body para cambiar el aspecto global.
+ */
+body {
+  @if $ligh-theme == true {
+    background-color: #fff;
+    color: #000;
+  } @else if $dark-theme {
+    background-color: #000;
+    color: #fff;
+  } @else {
+    background-color: #aaa;
+    color: #444;
+  }
+}
+
+$num: 1;
+$color-list: #aaa, #00f, orange, rgb(242, 255, 0), #0f0;
+
+@while $num < 6 {
+  figure:nth-child(#{$num}) {
+    color: rgb(0, 0, 0);
+    background-color: list.nth($color-list, $num);
+  }
+  $num: $num + 1;
+}
+
+@for $i from 1 to 6 {
+  li:nth-of-type(#{$i}) {
+    color: list.nth($color-list, $i);
+  }
+}
+
+// Mapa con las rutas de imágenes de banderas
+// Usado para generar clases dinámicas según el país
+/// @type Map
+
+$mapa: (
+  Espana: "../img/Espana.png",
+  Francia: "../img/Francia.png",
+  Italia: "../img/Italia.png",
+  Alemania: "../img/Alemania.png",
+);
+
+@each $u, $v in $mapa {
+  div.#{$u} {
+    background-image: url(#{$v});
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0.2rem;
+    margin: 1rem;
+    border: $border-width solid $border-color;
+    border-radius: 2 * $border-radius;
+  }
+}
+
+.container {
+  width: $main-container-width;
+  margin: $margin;
+}
+
+nav {
+  background-color: $navbar-background-color;
+  padding: $padding-2;
+  ul {
+    li {
+      display: inline-block;
+      padding-left: $padding;
+      padding-right: $padding;
+
+      &.active {
+        color: $navbar-color-hover;
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: $navbar-color-hover;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+figure.card {
+  border: $border-width #{$border-style} $border-color;
+  border-radius: $border-radius;
+  display: inline-block;
+  padding: 1rem;
+  width: $figure-width;
+}
+
+img {
+  border-radius: 2 * $border-radius;
+  width: $width;
+}
+
+figcaption {
+  font-size: $font-size;
+  margin: $margin-1;
+  text-align: center;
+}
+
+$color-error: #f00;
+$color-warning: #ff0;
+$color-accepted: #0f0;
+$color-normal: #00f;
+$color-shadow: #888;
+
+$border-radius: 0.4rem;
+
+// Sistema de colores para los botones
+// Cada clave del map genera una clase .btn-{tipo}
+/// @type Map
+
+$btn-colors: (
+  "error": $color-error,
+  "warning": $color-warning,
+  "accepted": $color-accepted,
+  "normal": $color-normal,
+);
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: 0.2rem 0.2rem $color-shadow;
+  }
+
+  &:active {
+    background-color: orange;
+    color: white;
+  }
+}
+
+@each $k, $v in $btn-colors {
+  .btn-#{$k} {
+    background-color: $v;
+  }
+}
