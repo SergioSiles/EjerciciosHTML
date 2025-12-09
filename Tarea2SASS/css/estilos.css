@@ -35,7 +35,7 @@ body {
 }
 
 .hero {
-  background: #112c50;
+  background: url("../img/header-background.jpg") center/cover no-repeat;
   color: #f5f5f5;
   padding-bottom: 80px;
 }
@@ -61,8 +61,10 @@ body {
   align-items: center;
 }
 .hero nav ul {
+  margin-top: 0px;
   display: flex;
   gap: 30px;
+  list-style-type: none;
 }
 .hero nav ul a {
   color: #f5f5f5;
@@ -70,18 +72,36 @@ body {
   text-decoration: none;
 }
 .hero .hero-content {
-  width: 90%;
-  margin: 80px auto;
-  max-width: 600px;
+  width: 600px;
+  left: 10%;
+  top: 28%;
+  margin: 0;
+  margin-left: 115px;
+}
+.hero .hero-content p:first-child {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+.hero .hero-content p:first-child .highlight {
+  font-weight: 700;
 }
 .hero .hero-content h1 {
   font-family: "Reckless Neue";
-  font-size: 48px;
-  margin: 20px 0;
+  font-size: 54px;
+  line-height: 1.2;
+  margin: 0 0 20px;
 }
 .hero .hero-content p {
-  margin-bottom: 15px;
-  color: #f5f5f5;
+  font-size: 16px;
+  line-height: 22px;
+  max-width: 480px;
+}
+.hero .hero-content .hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
 }
 
 .about article {
@@ -99,14 +119,15 @@ body {
   grid-column: 7/13;
 }
 .about aside img {
-  width: 100%;
+  width: 70%;
   border-radius: 20px;
+  margin: 50px;
 }
 
 .services {
   text-align: center;
-  padding: 80px 0;
-  background: #112c50;
+  padding: 120px 0;
+  background: url("../img/techo-cristal.jpg") center/cover no-repeat;
   color: #f5f5f5;
 }
 .services h3 {
@@ -158,20 +179,21 @@ body {
 .testimonials {
   background: #112c50;
   color: #f5f5f5;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 .testimonials h3 {
+  width: 80%;
+  margin: 0 auto 50px;
   font-family: "Reckless Neue";
-  text-align: center;
-  margin-bottom: 40px;
   position: relative;
+  text-align: left;
+  padding-left: 0;
 }
 .testimonials h3::before {
   content: "";
   position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -14px;
+  left: 0;
   width: 50px;
   height: 5px;
   background: #126f8d;
@@ -180,15 +202,14 @@ body {
   width: 80%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 .testimonials .testimonials-container blockquote {
-  grid-column: span 4;
   background: #f5f5f5;
   color: #000;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 0;
 }
 
 .contact-form {
@@ -247,7 +268,7 @@ body {
   border: none;
 }
 
-footer {
+body > footer {
   background: #112c50;
   color: #f5f5f5;
   padding: 50px 0;
@@ -255,10 +276,13 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 footer a {
   color: #f5f5f5;
+  text-decoration: none;
 }
-footer .newsletter input {
+
+.newsletter input {
   padding: 8px;
   background: #d9d9d9;
   border: none;
