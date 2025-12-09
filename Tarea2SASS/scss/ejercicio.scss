@@ -1,0 +1,352 @@
+// -----------------------------------------------------
+// Variables básicas
+// -----------------------------------------------------
+$dark: #112c50;
+$light: #f5f5f5;
+$accent: #126f8d;
+$bg: #f1f0ea;
+$text: #000;
+$form: #d9d9d9;
+
+$font-main: "Neue Montreal";
+$font-title: "Reckless Neue";
+
+// -----------------------------------------------------
+// Base
+// -----------------------------------------------------
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  font-family: $font-main;
+  color: $text;
+}
+
+// -----------------------------------------------------
+// GRID GENERAL
+// -----------------------------------------------------
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+// -----------------------------------------------------
+// BOTONES
+// -----------------------------------------------------
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+
+  &.primary {
+    background: #e3be86;
+    color: $text;
+  }
+
+  &.secondary {
+    background: #c55a26;
+    color: $light;
+  }
+}
+
+// -----------------------------------------------------
+// HEADER / HERO
+// -----------------------------------------------------
+.hero {
+  background: $dark;
+  color: $light;
+  padding-bottom: 80px;
+
+  .top-bar {
+    background: $dark;
+    padding: 8px 0;
+
+    .top-bar-content {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: $light;
+        font-size: 14px;
+      }
+    }
+  }
+
+  nav {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 30px;
+
+      a {
+        color: $light;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .hero-content {
+    width: 90%;
+    margin: 80px auto;
+    max-width: 600px;
+
+    h1 {
+      font-family: $font-title;
+      font-size: 48px;
+      margin: 20px 0;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: $light;
+    }
+  }
+}
+
+// -----------------------------------------------------
+// ABOUT
+// -----------------------------------------------------
+.about {
+  @extend .wrapper;
+
+  article {
+    grid-column: 1 / 7;
+
+    h2 {
+      font-family: $font-title;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+
+  aside {
+    grid-column: 7 / 13;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+}
+
+// -----------------------------------------------------
+// SERVICES (centrado simple)
+// -----------------------------------------------------
+.services {
+  text-align: center;
+  padding: 80px 0;
+  background: $dark;
+  color: $light;
+
+  h3 {
+    font-family: $font-title;
+    font-size: 36px;
+  }
+
+  p {
+    width: 450px;
+    margin: 20px auto;
+  }
+}
+
+// -----------------------------------------------------
+// TEAM
+// -----------------------------------------------------
+.team {
+  width: 90%;
+  margin: 100px auto;
+
+  h3 {
+    font-family: $font-title;
+    font-size: 28px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 50px;
+      height: 5px;
+      background: $accent;
+    }
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    article {
+      grid-column: span 4;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      h4 {
+        font-family: $font-title;
+        margin: 8px 0;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------
+// TESTIMONIALS
+// -----------------------------------------------------
+.testimonials {
+  background: $dark;
+  color: $light;
+  padding: 80px 0;
+
+  h3 {
+    font-family: $font-title;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 5px;
+      background: $accent;
+    }
+  }
+
+  .testimonials-container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    blockquote {
+      grid-column: span 4;
+      background: $light;
+      color: $text;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+// -----------------------------------------------------
+// CONTACT FORM
+// -----------------------------------------------------
+.contact-form {
+  width: 80%;
+  margin: 100px auto;
+
+  h3 {
+    font-family: $font-title;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 50px;
+      height: 5px;
+      background: $accent;
+    }
+  }
+
+  form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input,
+    textarea {
+      background: $form;
+      border: none;
+      padding: 10px;
+    }
+
+    textarea {
+      height: 150px;
+    }
+  }
+}
+
+// -----------------------------------------------------
+// LOCATION
+// -----------------------------------------------------
+.location {
+  width: 80%;
+  margin: 100px auto;
+
+  h3 {
+    font-family: $font-title;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 50px;
+      height: 5px;
+      background: $accent;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+}
+
+// -----------------------------------------------------
+// FOOTER
+// -----------------------------------------------------
+footer {
+  background: $dark;
+  color: $light;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  a {
+    color: $light;
+  }
+
+  .newsletter input {
+    padding: 8px;
+    background: $form;
+    border: none;
+  }
+}
