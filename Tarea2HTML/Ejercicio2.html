@@ -3,29 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Formulario de Registro</title>
   </head>
   <body>
     <form action="destination.html" method="POST">
       <p>
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" />
+        <input type="text" id="nombre" name="nombre" />
       </p>
 
       <p>
-        <label for="provincia">Provincia</label>
-        <select name="provincia" multiple>
-          <option value="Z">Zaragoza</option>
-          <option>Huesca</option>
-          <option>Teruel</option>
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia">
+          <option value="Zaragoza">Zaragoza</option>
+          <option value="Huesca">Huesca</option>
+          <option value="Teruel">Teruel</option>
         </select>
       </p>
 
       <p>
-        <textarea cols="10" rows="10">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem praesentium aliquam debitis voluptatum sit facilis, excepturi odit repudiandae et voluptatem est tempora iure harum eos incidunt blanditiis itaque ex sunt.
-            </textarea
-        >
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" cols="10" rows="10">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem praesentium aliquam debitis voluptatum sit facilis, excepturi odit repudiandae et voluptatem est tempora iure harum eos incidunt blanditiis itaque ex sunt.</textarea>
       </p>
       <p>
         <button type="reset">Haz click aquí</button>
@@ -40,26 +39,26 @@
       <fieldset>
         <legend>Datos Personales</legend>
         <p>
-          <label for="nombre">Nombre:</label>
+          <label for="nombre2">Nombre:</label>
           <input
             type="text"
-            name="nombre"
+            id="nombre2"
+            name="nombre2"
             placeholder="Inserta Nombre"
             required
           />
         </p>
         <p>
           <label for="apellidos">Apellidos:</label>
-          <input type="text" name="apellidos" value="Pérez" readonly />
+          <input type="text" id="apellidos" name="apellidos" value="Pérez" readonly />
         </p>
         <p>
-          <label for="provincia">Provincia</label>
-          <select name="provincia">
+          <label for="provincia2">Provincia:</label>
+          <select id="provincia2" name="provincia2">
             <option value="Toledo">Toledo</option>
             <option value="Madrid">Madrid</option>
           </select>
         </p>
-        <p></p>
       </fieldset>
     </form>
   </body>
